@@ -1,0 +1,212 @@
+@tailwind base;
+@tailwind components;
+
+
+
+.button {
+  @apply  text-center no-underline  border-b-4 border-white px-3 py-2 m-2 ;
+}
+
+.button:hover {
+  @apply shadow-xl bg-gray-200  border-blue-600;
+}
+.button:focus {
+  @apply  shadow-outline bg-blue-200;
+}
+.button:active {
+  @apply bg-gray-200  border-blue-600 border-b-2;
+}
+
+
+.header {
+  height: auto;
+}
+.video-cta{
+  height:auto;
+}
+@media (min-width: 1024px) {
+    .header{
+      height: 762px;
+    }
+  .video-cta {
+    height: 582px;
+  }
+}
+
+@tailwind utilities;
+
+.theme-light {
+  --bg-background-primary: #d6e8ee;
+  --bg-background-secondary: #dcf7f9;
+    --bg-background-tertiary: #badcd6;
+  /*Couleur focus*/
+  --bg-background-clicked: #bad0ea;
+
+  --text-copy-primary: #0a0a0a;
+  --text-copy-secondary: #2b313c;
+
+/*Couleur focus*/
+  --border-border-color-primary:  #1a202c;
+}
+.theme-dark {
+  --bg-background-primary: #1d2935;
+  --bg-background-secondary: #202c39;
+  --bg-background-tertiary: #263443;
+
+  /*Couleur focus*/
+  --bg-background-clicked: #22384a;
+
+
+  --text-copy-primary: #fbfff0;
+  --text-copy-secondary: #cbd5e0;
+
+  --border-border-color-primary: white;
+
+}
+
+.theme-light .search-highlighted {
+  background: #f0fff4;
+}
+
+.theme-light .search-hover:hover {
+  background: #f0fff4;
+}
+
+.theme-dark .markdown-body {
+  color: #24292e;
+}
+
+.theme-dark .search-highlighted {
+  background: #2d3748;
+}
+
+.theme-dark .search-hover:hover {
+  background: #2d3748;
+}
+
+
+.theme-dark .markdown-body {
+  color: #cbd5e0;
+}
+
+/*==============================*/
+
+
+/*Modifie la couleur de la hightlight curseur*/
+
+.theme-dark ::selection {
+  color: #c20000;
+  background: transparent;
+}
+
+.theme-dark span::selection {
+  color: white;
+  background: transparent;
+}
+
+.theme-dark a::selection {
+
+  color: #02ff00;
+  background: transparent;
+}
+
+.theme-light ::selection {
+  color: #5a0000;
+  background: transparent;
+}
+.theme-light span::selection {
+  color: black;
+  background: transparent;
+}
+
+.theme-light a::selection {
+  color: #ff0014;
+  background: transparent;
+}
+/*==============================*/
+
+.content-wrapper {
+  transition: background-color .25s;
+}
+
+/*nav .active {*/
+/*  font-weight: bold;*/
+/*  @apply border-black border-b;*/
+/*}*/
+
+/*.container-inner {*/
+/*  padding-left: 1rem;*/
+/*  padding-right: 1rem;*/
+/*}*/
+
+/*@media (min-width: 640px) {*/
+/*  .container-inner {*/
+/*    max-width: 640px;*/
+/*  }*/
+/*}*/
+
+/*@media (min-width: 768px) {*/
+/*  .container-inner {*/
+/*    max-width: 768px;*/
+/*  }*/
+/*}*/
+
+/*@media (min-width: 1024px) {*/
+/*  .container-inner {*/
+/*    max-width: 800px;*/
+/*  }*/
+/*}*/
+
+
+/*.checkmark {*/
+/*  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg%20width%3D%2229%22%20height%3D%2229%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cpath%20d%3D%22M4.427%2024.93A14.5%2014.5%200%201%201%2024.93%204.427c5.495%205.69%205.416%2014.733-.177%2020.326s-14.637%205.672-20.326.177z%22%20fill%3D%22%232E855A%22/%3E%3Cpath%20fill%3D%22%23FFF%22%20d%3D%22M10.234%2012.803l3.67%203.253L20.766%2010%2023%2012l-9.096%208L8%2014.789l2.234-2z%22/%3E%3C/svg%3E");*/
+/*  background-repeat: no-repeat;*/
+/*  @apply pl-10;*/
+/*}*/
+
+/*.responsive-container {*/
+/*  position: relative;*/
+/*  overflow: hidden;*/
+/*  padding-top: 56.25%;*/
+/*}*/
+
+/*.responsive-iframe {*/
+/*  position: absolute;*/
+/*  top: 0;*/
+/*  left: 0;*/
+/*  width: 100%;*/
+/*  height: 100%;*/
+/*  border: 0;*/
+/*}*/
+
+
+.zoom{
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+.zoom:hover{
+  -webkit-transform: scale(0.2);
+  transform: scale(1.1);
+  /*transform: translateX(-25%) translateY(-25%);*/
+}
+
+
+
+/*.custom-cur {*/
+/*  cursor: url('/assets/img/cursor_light.svg');*/
+/*}*/
+
+/* With a .cur fallback */
+/*.custom-cur {*/
+/*  cursor: url('/images/chef.svg'),*/
+/*  url('/images/chef.cur');*/
+/*}*/
+
+/* With a custom hotspot */
+/*.custom-cur {*/
+/*  cursor: url('/assets/img/cursor_light.svg') 100 120;*/
+/*}*/
+
+/* With a non-custom fallback: */
