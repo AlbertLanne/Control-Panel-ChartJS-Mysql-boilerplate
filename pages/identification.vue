@@ -6,7 +6,13 @@
 
 <script>
   export default {
-    name: "identification"
+    name: "identification",
+    head() {
+      return {
+        title: "Identification page"
+      };
+    },
+
   }
 </script>
 

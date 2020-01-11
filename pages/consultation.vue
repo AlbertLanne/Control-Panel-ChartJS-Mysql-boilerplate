@@ -2,9 +2,9 @@
 <div>
   <p class="my-6 text-4xl font-serif text-center">
     Ordre de fabrication n°1</p>
-
+<div>
   <line-example/>
-
+</div>
 
 </div>
 </template>
