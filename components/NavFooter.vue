@@ -1,6 +1,6 @@
 <template>
     <footer class=" bg-white flex">
-test
+
     </footer>
 </template>
 
