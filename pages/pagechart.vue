@@ -31,13 +31,18 @@
 
         </div>
 
-<!--       consol debug ici-->
-        <div class="m-16 rounded-lg bg-black  h-auto w-auto  text-green-500 font-hairline text-xl p-2 ">
-          <div class="m-2 ">
-          <span>Selected: {{ selected }}</span>
+        <!--       consol debug ici-->
+        <div class="m-16  h-auto w-8/12  text-green-500 font-hairline text-xl p-2 ">
+          <div class="w-full p-2 bg-blue-800">
+            <p class="text-xl font-medium text-white">Debugging consol</p>
           </div>
-          <div class="m-2">
-          <span>Selected: {{ options }}</span>
+          <div class=" w-full p-2 bg-black ">
+            <div class="m-2 ">
+              <span>Selected: {{ selected }}</span>
+            </div>
+            <div class="m-2">
+              <span>Selected: {{ options }}</span>
+            </div>
           </div>
         </div>
       </div>
@@ -63,26 +68,22 @@
       return {
         selected: 'A',
         options: [
-          {text: 'Production global annuelle', value: 'A', data:'test'},
-          {text: 'Répartition produit', value: 'B', data:'test'},
-          {text: 'Changes horaire par produit', value: 'C',data:'test'}
+          {text: 'Production global annuelle', value: 'A', data: 'test'},
+          {text: 'Répartition produit', value: 'B', data: 'test'},
+          {text: 'Changes horaire par produit', value: 'C', data: 'test'}
         ],
       };
     },
     methods: {
       DataAction: function (event) {
         // alert('a' + this.selected + '!')
-
         if (this.selected === 'A') {
-          alert('a' + this.selected + '!')
         }
         if (this.selected === 'B') {
-          alert('b' + this.selected + '!')
         }
         if (this.selected === 'C') {
-          alert('c' + this.selected + '!')
         }
-        }
+      }
 
 
     },

@@ -1,4 +1,4 @@
-import { Bar } from './BaseCharts'
+import {Bar} from './BaseCharts'
 // import { reactiveData } from '../mixins'
 
 export default {
@@ -11,11 +11,11 @@ export default {
       maintainAspectRatio: false
     }
   }),
-  created () {
+  created() {
     this.fillData()
   },
 
-  mounted () {
+  mounted() {
     this.renderChart(this.chartData, this.options)
 
     setInterval(() => {
@@ -24,7 +24,7 @@ export default {
   },
 
   methods: {
-    fillData () {
+    fillData() {
       this.chartData = {
         labels: ['January' + this.getRandomInt(), 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
         datasets: [
@@ -36,7 +36,7 @@ export default {
         ]
       }
     },
-    getRandomInt () {
+    getRandomInt() {
       return Math.floor(Math.random() * (50 - 5 + 1)) + 5
     }
   }
