@@ -20,10 +20,10 @@
 
       </div>
 
-      <div class="bg-gray-500  h-full w-full justify-center ">
+      <div class="bg-gray-500  h-full w-full justify-center mx-auto items-center">
 
-        <p class="text-2xl m-6 flex text-center font-light">> Fabrication fibre</p>
-        <div class="w-9/12 justify-center bg-red-100 rounded-lg">
+        <p class="text-2xl ml-8 m-6 w-1/3 text-center font-light "> > Fabrication fibre</p>
+        <div class="w-9/12 justify-center bg-red-100 rounded-lg mx-auto">
           <div>
             <reactive-example/>
 
@@ -32,7 +32,7 @@
         </div>
 
         <!--       consol debug ici-->
-        <div class="m-16  h-auto w-8/12  text-green-500 font-hairline text-xl p-2 ">
+        <div class="m-16  h-auto w-8/12  text-green-500 font-hairline text-xl p-2  mx-auto ">
           <div class="w-full p-2 bg-blue-800">
             <p class="text-xl font-medium text-white">Debugging consol</p>
           </div>
