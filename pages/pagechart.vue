@@ -32,9 +32,13 @@
         </div>
 
 <!--       consol debug ici-->
-        <div class="m-16 rounded-lg bg-black  h-auto w-auto flex text-green-500 font-hairline text-xl p-2 ">
+        <div class="m-16 rounded-lg bg-black  h-auto w-auto  text-green-500 font-hairline text-xl p-2 ">
+          <div class="m-2 ">
           <span>Selected: {{ selected }}</span>
-
+          </div>
+          <div class="m-2">
+          <span>Selected: {{ options }}</span>
+          </div>
         </div>
       </div>
 
@@ -59,9 +63,9 @@
       return {
         selected: 'A',
         options: [
-          {text: 'Production global annuelle', value: 'A'},
-          {text: 'Répartition produit', value: 'B'},
-          {text: 'Changes horaire par produit', value: 'C'}
+          {text: 'Production global annuelle', value: 'A', data:'test'},
+          {text: 'Répartition produit', value: 'B', data:'test'},
+          {text: 'Changes horaire par produit', value: 'C',data:'test'}
         ],
       };
     },
