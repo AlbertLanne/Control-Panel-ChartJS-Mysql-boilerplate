@@ -1,7 +1,7 @@
 <template>
-  <div class="">
+    <div class=" min-h-screen bg-orange-400 flex-wrap text-copy-primary flex flex-wrap ">
 
-    <div class="w-full h-full flex bg-gray-500 ">
+    <div class="">
       Production global annuelle
     </div>
 

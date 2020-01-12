@@ -4,6 +4,12 @@
 
       <div class="bg-white font-sans text-xl flex">
         <nav class="flex flex-col  sm:flex-row">
+
+          <nuxt-link to="/index"
+                     class="button ml-8 ">
+            Home
+          </nuxt-link>
+
           <nuxt-link to="/identification"
                      class="button ml-8 ">
             Identification

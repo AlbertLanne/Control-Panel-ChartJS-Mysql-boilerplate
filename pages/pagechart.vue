@@ -5,10 +5,10 @@
       <div class="bg-red-500 rounded-lg  w-3/12 flex  justify-center ">
         <div class="align-middle">
 
-          <div class="bg-black mt-20 border h border-black bg-white p-2 rounded-lg">
+          <div class="bg-black mt-20 border h border-black bg-white p-2 rounded-lg ">
 
             <select v-model="selected" class="bg-white">
-              <option disabled value="">Please select one</option>
+<!--              <option disabled value="">Please select one</option>-->
               <option>Production global annuelle</option>
               <option>Répartition produit</option>
               <option>Changes horaire par produit</option>
