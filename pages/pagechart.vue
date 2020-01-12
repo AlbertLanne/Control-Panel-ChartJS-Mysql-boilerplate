@@ -41,7 +41,7 @@
               <span>Selected: {{ selected }}</span>
             </div>
             <div class="m-2">
-              <span>Selected: {{ options }}</span>
+              <span>Selected: {{ val }}</span>
             </div>
           </div>
         </div>
@@ -55,24 +55,38 @@
 <script>
 
   import ReactiveExample from '../components/chart/ReactiveExample'
-
+  import {Bar} from "../components/chart/BaseCharts";
 
   export default {
+    extends: Bar,
     head() {
       return {
         title: "Chart page"
       };
     },
     components: {ReactiveExample,},
-    data() {
-      return {
-        selected: 'A',
-        options: [
-          {text: 'Production global annuelle', value: 'A', data: 'test'},
-          {text: 'Répartition produit', value: 'B', data: 'test'},
-          {text: 'Changes horaire par produit', value: 'C', data: 'test'}
-        ],
-      };
+    data: () => ({
+      chartData: '',
+      selected: 'A',
+      val: [
+        {text: 'Production global annuelle', value: 'A', data: 'test'},
+        {text: 'Répartition produit', value: 'B', data: 'test'},
+        {text: 'Changes horaire par produit', value: 'C', data: 'test'}
+      ],
+      options: {
+        responsive: true,
+        maintainAspectRatio: false
+      }
+    }),
+
+    created() {
+      this.fillData()
+    },
+    mounted() {
+      // this.renderChart(this.chartData, this.options)
+      // setInterval(() => {
+      //   this.fillData()
+      // }, 5000)
     },
     methods: {
       DataAction: function (event) {
@@ -83,17 +97,24 @@
         }
         if (this.selected === 'C') {
         }
+      },
+      fillData() {
+        this.chartData = {
+          labels: ['January' + this.getRandomInt(), 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+          datasets: [
+            {
+              label: 'Data One',
+              backgroundColor: '#f87979',
+              data: [this.getRandomInt(), this.getRandomInt(), this.getRandomInt(), this.getRandomInt(), this.getRandomInt(), this.getRandomInt(), this.getRandomInt(), this.getRandomInt(), this.getRandomInt(), this.getRandomInt(), this.getRandomInt(), this.getRandomInt()]
+            }
+          ]
+        }
+      },
+      getRandomInt() {
+        return Math.floor(Math.random() * (50 - 5 + 1)) + 5
       }
-
-
     },
-    // computed: {
-    //   DataAction () {
-    //     lol = 13;
-    //     console.log(lol);
-    //     return lol;
-    //   },
-    // },
+
   };
 </script>
 
