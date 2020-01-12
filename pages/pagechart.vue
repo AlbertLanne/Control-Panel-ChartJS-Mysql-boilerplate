@@ -5,8 +5,8 @@
         <div class="align-middle">
           <div class="bg-black mt-20 border h border-black bg-white p-2 rounded-lg ">
             <select v-model="selected" class="bg-white border-gray-600 border-b">
-              <option v-for="option in options" v-bind:value="option.value">
-                {{ option.text }}
+              <option v-for="val in val" v-bind:value="val.value">
+                {{ val.text }}
               </option>
             </select>
           </div>
