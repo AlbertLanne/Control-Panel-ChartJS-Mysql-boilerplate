@@ -69,9 +69,9 @@
       chartData: '',
       selected: 'A',
       val: [
-        {text: 'Production global annuelle', value: 'A', data: 'test'},
-        {text: 'Répartition produit', value: 'B', data: 'test'},
-        {text: 'Changes horaire par produit', value: 'C', data: 'test'}
+        {text: 'Production global annuelle', value: 'A', data: '10'},
+        {text: 'Répartition produit', value: 'B', data: '20'},
+        {text: 'Changes horaire par produit', value: 'C', data: '30'}
       ],
       options: {
         responsive: true,
@@ -79,9 +79,9 @@
       }
     }),
 
-    created() {
-      this.fillData()
-    },
+    // created() {
+    //   this.fillData()
+    // },
     mounted() {
       // this.renderChart(this.chartData, this.options)
       // setInterval(() => {
@@ -98,21 +98,21 @@
         if (this.selected === 'C') {
         }
       },
-      fillData() {
-        this.chartData = {
-          labels: ['January' + this.getRandomInt(), 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
-          datasets: [
-            {
-              label: 'Data One',
-              backgroundColor: '#f87979',
-              data: [this.getRandomInt(), this.getRandomInt(), this.getRandomInt(), this.getRandomInt(), this.getRandomInt(), this.getRandomInt(), this.getRandomInt(), this.getRandomInt(), this.getRandomInt(), this.getRandomInt(), this.getRandomInt(), this.getRandomInt()]
-            }
-          ]
-        }
-      },
-      getRandomInt() {
-        return Math.floor(Math.random() * (50 - 5 + 1)) + 5
-      }
+      // fillData() {
+      //   this.chartData = {
+      //     labels: ['January' + this.getRandomInt(), 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+      //     datasets: [
+      //       {
+      //         label: 'Data One',
+      //         backgroundColor: '#f87979',
+      //         data: [this.getRandomInt(), this.getRandomInt(), this.getRandomInt(), this.getRandomInt(), this.getRandomInt(), this.getRandomInt(), this.getRandomInt(), this.getRandomInt(), this.getRandomInt(), this.getRandomInt(), this.getRandomInt(), this.getRandomInt()]
+      //       }
+      //     ]
+      //   }
+      // },
+      // getRandomInt() {
+      //   return Math.floor(Math.random() * (50 - 5 + 1)) + 5
+      // }
     },
 
   };
