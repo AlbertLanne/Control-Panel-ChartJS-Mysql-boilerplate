@@ -1,23 +1,50 @@
-const express = require("express");
-const bodyParser = require("body-parser");
+var mysql = require('mysql');
 
-const app = express();
-
-// parse requests of content-type: application/json
-app.use(bodyParser.json());
-
-// parse requests of content-type: application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({ extended: true }));
-
-// simple route
-app.get("/", (req, res) => {
-  res.json({ message: "Incoming cool data here" });
-
-  console.log("Successfully connected to the database.");
-
+var con = mysql.createConnection({
+  host: "localhost",
+  user: "yourusername",
+  password: "yourpassword",
+  database: "mydb"
 });
 
-// set port, listen for requests
-app.listen(4000, () => {
-  console.log("Server is running on port 4000.");
+con.connect(function(err) {
+  if (err) throw err;
+  con.query("SELECT * FROM customers", function (err, result, fields) {
+    if (err) throw err;
+    console.log(result);
+  });
 });
+
+
+
+// const express = require("express");
+// const bodyParser = require("body-parser");
+//
+// const app = express();
+//
+// // parse requests of content-type - application/json
+// app.use(bodyParser.json());
+//
+// // parse requests of content-type - application/x-www-form-urlencoded
+// app.use(bodyParser.urlencoded({ extended: true }));
+//
+// // simple route
+// app.get("/", (req, res) => {
+//   res.json({ message: "Welcome to bezkoder application." });
+// });
+//
+// require("./customer.routes.js")(app);
+//
+// // set port, listen for requests
+// const PORT = process.env.PORT || 3000;
+// app.listen(PORT, () => {
+//   console.log(`Server is running on port ${PORT}.`);
+// });
+
+
+
+
+
+
+
+

@@ -5,9 +5,9 @@
   "author": "AlbertLanne",
   "private": true,
   "scripts": {
-    "dev": "cross-env NODE_ENV=development nodemon server/server.js --watch server",
-    "build": "nuxt build",
+    "dev": "cross-env NODE_ENV=development nodemon index.js --watch server",
     "start": "cross-env NODE_ENV=production node server/server.js",
+    "build": "nuxt build",
     "generate": "nuxt generate"
   },
   "dependencies": {
