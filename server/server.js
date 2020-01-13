@@ -11,10 +11,13 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // simple route
 app.get("/", (req, res) => {
-  res.json({ message: "Welcome to bezkoder application." });
+  res.json({ message: "Incoming cool data here" });
+
+  console.log("Successfully connected to the database.");
+
 });
 
 // set port, listen for requests
-app.listen(3000, () => {
-  console.log("Server is running on port 3000.");
+app.listen(4000, () => {
+  console.log("Server is running on port 4000.");
 });
