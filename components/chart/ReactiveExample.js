@@ -1,11 +1,18 @@
 import {Bar} from './BaseCharts'
-// import { reactiveData } from '../mixins'
+
+import data from '../../servertest'
+
+// myFunction: function(){
+//   return Utils.something()
+// https://github.com/request/request/issues/1529
 
 export default {
+
   extends: Bar,
   // mixins: [reactiveData],
   data: () => ({
     chartData: '',
+    logitems: data,
     options: {
       responsive: true,
       maintainAspectRatio: false
