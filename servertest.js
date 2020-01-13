@@ -7,12 +7,12 @@ var con = mysql.createConnection({
   database: "bfgvnm6ajhbocjxbjmly"
 });
 
-con.connect(function(err) {
+data = con.connect(function(err) {
   if (err) throw err;
   //Select all customers and return the result object:
   con.query("SELECT * FROM `producttable`", function (err, result, fields) {
     if (err) throw err;
     console.log(result);
-
   });
 });
+module.exports = data;
