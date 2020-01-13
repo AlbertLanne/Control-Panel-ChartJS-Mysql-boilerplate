@@ -4,6 +4,7 @@
       <div class="bg-red-500 rounded-lg  w-3/12 flex  justify-center ">
         <div class="align-middle">
           <div class="bg-black mt-20 border h border-black bg-white p-2 rounded-lg ">
+
             <select v-model="selected" class="bg-white border-gray-600 border-b">
               <option v-for="val in val" v-bind:value="val.value">
                 {{ val.text }}
@@ -11,7 +12,7 @@
             </select>
           </div>
           <div class="justify-end flex my-4">
-            <button class="border-2 rounded-lg border-gray-700  px-4 p-2 h-12 flex hover:bg-blue-200"
+            <button class="border rounded-lg border-gray-700  px-4 p-2 h-12 flex hover:bg-blue-200"
                     v-on:click="DataAction">
               Valider
             </button>
@@ -24,11 +25,10 @@
 
         <p class="text-2xl ml-8 m-6 w-1/3 text-center font-light "> > Fabrication fibre</p>
         <div class="w-9/12 justify-center bg-red-100 rounded-lg mx-auto">
+
           <div>
             <reactive-example/>
-
           </div>
-
         </div>
 
         <!--       consol debug ici-->
@@ -36,6 +36,7 @@
           <div class="w-full p-2 bg-blue-800">
             <p class="text-xl font-medium text-white">Debugging consol</p>
           </div>
+
           <div class=" w-full p-2 bg-black ">
             <div class="m-2 ">
               <span>Selected: {{ selected }}</span>
@@ -44,12 +45,12 @@
               <span>Selected: {{ val }}</span>
             </div>
           </div>
+
         </div>
       </div>
-
     </div>
-
   </div>
+
 </template>
 
 <script>

@@ -24,6 +24,7 @@ export default {
   },
 
   methods: {
+
     fillData() {
       this.chartData = {
         labels: ['January' + this.getRandomInt(), 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
@@ -36,6 +37,7 @@ export default {
         ]
       }
     },
+
     getRandomInt() {
       return Math.floor(Math.random() * (50 - 5 + 1)) + 5
     }
