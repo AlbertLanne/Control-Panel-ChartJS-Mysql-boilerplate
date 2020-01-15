@@ -16,4 +16,4 @@ data = con.connect(function(err) {
   });
 
 });
-module.exports = data;
+// module.exports = data;

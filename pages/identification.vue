@@ -1,7 +1,11 @@
 <template>
-  <div class=" min-h-screen bg-green-300 flex-wrap text-copy-primary flex flex-wrap ">
-    <p class=" m-6 text-6xl font-thin"> text bidon</p>
+  <div class="">
+  <div class=" min-h-screen bg-green-300 flex-wrap text-copy-primary  flex flex-wrap p-2">
+    <p class=" m-6 text-6xl font-extrabold"> Beaucoup de texte ici</p>
+
   </div>
+  </div>
+
 </template>
 
 <script>

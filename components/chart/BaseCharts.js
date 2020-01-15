@@ -5,6 +5,7 @@ export function generateChart (chartId, chartType) {
     render: function (createElement) {
       return createElement(
         'div', {
+
           style: this.styles,
           class: this.cssClasses
         },
