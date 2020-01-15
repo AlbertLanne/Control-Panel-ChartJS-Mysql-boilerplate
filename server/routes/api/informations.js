@@ -3,32 +3,52 @@ var mysql = require('mysql');
 const router = express.Router();
 
 router.get('/', async (req, res) => {
-  const products = await loadProductsCollection();
-  res.send(await products.find({}).toArray());
+  const informations = await loadProductsCollection();
+  res.send(await informations;
+  // res.send(await informations.find([]).toArray());
 });
+
 
 
 async function loadProductsCollection() {
-
-  var client = mysql.createConnection({
-    host: "bfgvnm6ajhbocjxbjmly-mysql.services.clever-cloud.com",
-    user: "uisomclwcgug5cj5",
-    password: "58Eg8vzqeQ4Rx0zxjhFw",
-    database: "bfgvnm6ajhbocjxbjmly"
-  });
-
-  client.connect(function (err) {
+  var con = mysql.createConnection('mysql://uisomclwcgug5cj5:58Eg8vzqeQ4Rx0zxjhFw@bfgvnm6ajhbocjxbjmly-mysql.services.clever-cloud.com:3306/bfgvnm6ajhbocjxbjmly');
+  connection = con.connect(function(err) {
     if (err) throw err;
     //Select all customers and return the result object:
-    test = client.query("SELECT * FROM `producttable`", function (err, result, fields) {
+    con.query("SELECT * FROM `producttable`", function (err, result, fields) {
       if (err) throw err;
-      return result;
+      console.log(result);
     });
-});
-  return test;
+  });
 }
 
+
+// async function loadProductsCollection() {
+//
+//   var client = mysql.createConnection({
+//     host: "bfgvnm6ajhbocjxbjmly-mysql.services.clever-cloud.com",
+//     user: "uisomclwcgug5cj5",
+//     password: "58Eg8vzqeQ4Rx0zxjhFw",
+//     database: "bfgvnm6ajhbocjxbjmly"
+//   });
+//
+//   client.connect(function (err) {
+//     if (err) throw err;
+//     //Select all customers and return the result object:
+//     client.query("SELECT * FROM `producttable`", function (err, result, fields) {
+//       if (err) throw err;
+//       console.log(result);
+//     });
+// });
+// }
+
+
 module.exports = router;
+
+
+
+
+
 
 
 //
