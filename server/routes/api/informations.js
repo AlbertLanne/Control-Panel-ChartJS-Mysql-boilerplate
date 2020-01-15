@@ -10,22 +10,22 @@ router.get('/', async (req, res) => {
 
 async function loadProductsCollection() {
 
-  var con = mysql.createConnection({
+  var client = mysql.createConnection({
     host: "bfgvnm6ajhbocjxbjmly-mysql.services.clever-cloud.com",
     user: "uisomclwcgug5cj5",
     password: "58Eg8vzqeQ4Rx0zxjhFw",
     database: "bfgvnm6ajhbocjxbjmly"
   });
 
-  con.connect(function (err) {
+  client.connect(function (err) {
     if (err) throw err;
     //Select all customers and return the result object:
-    con.query("SELECT * FROM `producttable`", function (err, result, fields) {
+    test = client.query("SELECT * FROM `producttable`", function (err, result, fields) {
       if (err) throw err;
       return result;
     });
 });
-  return result;
+  return test;
 }
 
 module.exports = router;
